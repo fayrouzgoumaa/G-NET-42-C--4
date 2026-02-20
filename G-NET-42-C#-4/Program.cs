@@ -10,13 +10,16 @@
     //    Thursday,
     //    Friday
     //}
+   
 
 
     internal class Program
     {
+        const int NumberOfStudents = 3;
+        const int NumberOfSubjects = 4;
         static void Main(string[] args)
         {
-            //#region Part1
+            #region Part1
             //int dayNumber = ReadDayNumber();
 
             //if (!IsValidDayNumber(dayNumber))
@@ -28,7 +31,7 @@
             //DayOfWeek selectedDay = (DayOfWeek)dayNumber;
 
             //PrintDayDetails(selectedDay);
-            //#endregion
+            #endregion
             //---------------------------------------part2-------------
             //#region part2
             //int arraySize = ReadArraySize();
@@ -36,8 +39,14 @@
 
             //DisplayArrayStatistics(numbers);
             //#endregion
+            #region Q2
+            //double[,] grades = ReadStudentGrades();
+
+            //PrintStudentAverages(grades);
+            //PrintClassAverage(grades);
+            #endregion
         }
-        //#region part1
+        #region part1
         //static int ReadDayNumber()
         //{
         //    Console.Write("Enter a day number (1–7): ");
@@ -63,8 +72,8 @@
         //            break;
         //    }
         //}
-        //#endregion
-        //#region part2
+        #endregion
+        #region part2
         //static int ReadArraySize()
         //{
         //    Console.Write("Enter array size: ");
@@ -116,7 +125,59 @@
         //            Console.Write(", ");
         //    }
         //}
-        //    #endregion
-        
+        #endregion
+        #region Q2
+        //static double[,] ReadStudentGrades()
+        //{
+        //    double[,] grades = new double[NumberOfStudents, NumberOfSubjects];
+
+        //    for (int student = 0; student < NumberOfStudents; student++)
+        //    {
+        //        Console.WriteLine($"\nEntering grades for Student {student + 1}:");
+
+        //        for (int subject = 0; subject < NumberOfSubjects; subject++)
+        //        {
+        //            Console.Write($"Enter grade for Subject {subject + 1}: ");
+        //            grades[student, subject] = double.Parse(Console.ReadLine() ?? "0");
+        //        }
+        //    }
+
+        //    return grades;
+        //}
+        //static void PrintStudentAverages(double[,] grades)
+        //{
+        //    Console.WriteLine("\nStudent Averages:");
+
+        //    for (int student = 0; student < NumberOfStudents; student++)
+        //    {
+        //        double total = 0;
+
+        //        for (int subject = 0; subject < NumberOfSubjects; subject++)
+        //        {
+        //            total += grades[student, subject];
+        //        }
+
+        //        double average = total / NumberOfSubjects;
+        //        Console.WriteLine($"Student {student + 1} Average = {average}");
+        //    }
+        //}
+        //static void PrintClassAverage(double[,] grades)
+        //{
+        //    double total = 0;
+
+        //    for (int student = 0; student < NumberOfStudents; student++)
+        //    {
+        //        for (int subject = 0; subject < NumberOfSubjects; subject++)
+        //        {
+        //            total += grades[student, subject];
+        //        }
+        //    }
+
+        //    double classAverage = total / (NumberOfStudents * NumberOfSubjects);
+
+        //    Console.WriteLine($"\nOverall Class Average = {classAverage}");
+        //}
+        #endregion
+
     }
 }
